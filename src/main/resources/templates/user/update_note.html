@@ -1,0 +1,23 @@
+<!-- update_note.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{user/dashboardnavbar::layout(~{::section})}">
+  <section>
+    <div class="container mt-5">
+      <h2 class="text-center">Update Note</h2>
+      <form th:action="@{'/user/note/update/' + ${note.id}}" th:object="${note}" method="post">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" th:field="*{title}" class="form-control" placeholder="Enter note title" required>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="content">Content</label>
+          <textarea th:field="*{contant}" class="form-control" rows="6" placeholder="Enter note content" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success mt-4">Update Note</button>
+      </form>
+    </div>
+  </section>
+</html>

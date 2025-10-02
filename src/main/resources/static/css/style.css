@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.image{
+	
+	margin-top : 5px;
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+	
+}
+
+p{
+	
+	padding: 20px;
+	text-align: center;
+
+}
+
+button{
+	
+	text-align: center;
+	justify-content: center;
+}
+
+@media (min-width: 1025px) {
+.h-custom {
+height: 100vh !important;
+}
+}

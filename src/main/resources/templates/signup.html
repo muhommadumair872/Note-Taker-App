@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{navbar::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<section class="h-100 h-custom" style="background-color: #8fc4b7;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
+
+                        <!-- ✅ Session Message (use th:with to avoid double call) -->
+                        <th:block th:with="msg=${@sessionHelper.removeMessageFromSession('message')}">
+                            <div th:if="${msg != ''}" class="alert alert-info" th:text="${msg}"></div>
+                        </th:block>
+
+                        <!-- ✅ Signup Form -->
+                        <form th:action="@{/process}" th:object="${user}" method="post">
+                            <div class="mb-3">
+                                <label class="form-label">Name</label>
+                                <input th:field="*{name}" required type="text" class="form-control">
+                                <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Email address</label>
+                                <input th:field="*{email}" required type="email" class="form-control">
+                                <div class="form-text">We'll never share your email with anyone else.</div>
+                                <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Password</label>
+                                <input th:field="*{password}" required type="password" class="form-control">
+                                <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="text-danger"></div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

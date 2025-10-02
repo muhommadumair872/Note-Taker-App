@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)" >
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"  th:href="@{/css/style.css}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-sVnnP2zvODb0LwnQaKi5XvM6L3HRMez3i6JWhiKkOlr2ukidC9BG4bQxYQ+dT1INlo3gk0eA7a1Y8kZ+XcVOxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+
+
+<section>
+
+<nav class="navbar navbar-expand-lg navbar-dark  bg-success  fixed-top ">
+  <a class="navbar-brand"   th:href="@{/}"   href="#">Note Taker </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"  th:href="@{/}"  >Home </a>
+        
+        <i class="fa-solid fa-house-chimney"></i>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link"   th:href="@{/signup}"    href="#">SignUp</a>
+      </li>
+      
+      
+       <li class="nav-item">
+        <a class="nav-link"   th:href="@{/login}"   href="#">Login</a>
+      </li>
+     
+      
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+</section>
+
+<div class="image">
+
+<img th:src="@{/img/pencil.png}" height="20px" width="300px" class="img-fluid d-block mx-auto mt-5" alt="Pencil">
+<p>added tones is convenient in that all notes may be related to familiar chords. Inversions of added tone chords where the added tone is the bass note are...e the form below to add a new note. You can give your note a title and write down any important information you want to remember. Once you're done, click the "Add Note" button to save it. This helps you stay organized and keep track of your thoughts or tasks.</p>\
+<button class="btn btn-primary d-block mx-auto">Click Me</button>
+
+
+</div>
+
+
+
+</body>
+</html>

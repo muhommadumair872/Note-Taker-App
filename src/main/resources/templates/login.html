@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{navbar::layout(~{::section})}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+	crossorigin="anonymous">
+
+</head>
+<body>
+
+
+	<section class="h-100 h-custom" style="background-color: #8fc4b7;">
+		<div class="container py-5 h-100">
+			<div
+				class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col-lg-8 col-xl-6">
+					<div class="card rounded-3">
+						<i class="fa-solid fa-address-card"></i>
+						<div class="card-body p-4 p-md-5">
+							<h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Login here</h3>
+
+							<form th:action="@{/authenticate}" th:object="${user}" method="post">
+
+								<div class="mb-3">
+									<label for="exampleInputEmail1" class="form-label">Email
+										address</label> <input required name="email" type="email"
+										class="form-control" id="exampleInputEmail1"
+										aria-describedby="emailHelp">
+
+
+
+									<div id="emailHelp" class="form-text">We'll never share
+										your email with anyone else.</div>
+								</div>
+
+
+
+
+								<div class="mb-3">
+									<label for="exampleInputPassword1" class="form-label">Password</label>
+									<input required name="password" type="password"
+										class="form-control" id="exampleInputPassword1">
+								</div>
+
+
+
+
+
+								<button type="submit" class="btn btn-primary">Submit</button>
+								
+								<button type="reset" class="btn btn-danger">Reset</button>
+								
+								
+								
+								<!-- Google Login Button -->
+<a href="/oauth2/authorization/google" class="btn btn-outline-dark btn-sm w-100 d-flex align-items-center justify-content-center mt-3" style="gap: 5px;">
+    <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google" style="width: 18px; height: 18px;">
+    <span>sign in with Google</span>
+</a>
+
+
+
+<!-- GitHub Login Button -->
+<a href="/oauth2/authorization/github" class="btn btn-outline-dark btn-sm w-100 d-flex align-items-center justify-content-center mt-3" style="gap: 5px;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="width: 18px; height: 18px;">
+    <span>sign in with GitHub</span>
+</a>
+
+
+<a th:href="@{'/signup'}">
+
+i have not account Available ?
+
+</a>
+								
+								
+							</form>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+</body>
+</html>

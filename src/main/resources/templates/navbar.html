@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html    xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css"  th:href="@{/css/style.css}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-sVnnP2zvODb0LwnQaKi5XvM6L3HRMez3i6JWhiKkOlr2ukidC9BG4bQxYQ+dT1INlo3gk0eA7a1Y8kZ+XcVOxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+</head>
+<body>
+
+
+
+<section>
+
+<nav class="navbar navbar-expand-lg navbar-dark  bg-success fixed-top">
+  <a class="navbar-brand"   th:href="@{/}"   href="#">Note Taker </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"  th:href="@{/}"  >Home </a>
+        
+        <i class="fa-solid fa-house-chimney"></i>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link"   th:href="@{/signup}"    href="#">SignUp</a>
+      </li>
+      
+      
+       <li class="nav-item">
+        <a class="nav-link"   th:href="@{/login}"   href="#">Login</a>
+      </li>
+     
+      
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+</section>
+
+<div th:replace="${content}"></div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

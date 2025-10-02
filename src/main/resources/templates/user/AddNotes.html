@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{user/dashboardnavbar::layout(~{::section})}">
+<section>
+	<div class="row mt-5">
+		<div class="col-sm-12 text-center">
+			<div class="card">
+				<div class="card-body">
+					<h2 class="card-title text-success">Add your Notes</h2>
+					<form th:action="@{/user/Note_process}" th:object="${note}"
+						method="post">
+						<input type="hidden" th:name="${_csrf.parameterName}"
+							th:value="${_csrf.token}" />
+
+						<div class="mb-3 text-start">
+							<label for="title" class="form-label">Title</label> <input
+								required th:field="*{title}" type="text" class="form-control"
+								placeholder="Add your Title">
+						</div>
+
+						<div class="mb-3 text-start">
+							<label for="content" class="form-label">Content</label>
+							<textarea required th:field="*{content}" class="form-control"
+								rows="10" placeholder="Add your Content"></textarea>
+						</div>
+
+						<button type="submit" class="btn btn-primary">Add</button>
+					</form>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- TinyMCE -->
+	<script
+		src="https://cdn.tiny.cloud/1/z85otce9z6ip7r96fu3rquwxeh7sie7v8uj8glt7zn7bqu1k/tinymce/8/tinymce.min.js"
+		referrerpolicy="origin" crossorigin="anonymous"></script>
+	<script>
+		tinymce
+				.init({
+					selector : 'textarea',
+					plugins : 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+					toolbar : 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+				});
+	</script>
+</section>
+</html>
