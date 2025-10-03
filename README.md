@@ -24,11 +24,7 @@ Users can register and log in to manage their notes securely.
 
 ## 📷 Screenshots
 
-![Home Page](screenshot/homepage.png)
-![Notes Page](screenshot/notes.png)
-
----
-
+C:\Users\muhom\Pictures\Screenshots
 ## ▶️ Run Locally
 
 1. Clone the repository
