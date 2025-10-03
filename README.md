@@ -45,6 +45,9 @@ Users can register and log in to manage their notes securely.
 4. Open in browser: `http://localhost:8080`
 
 ---
+## 📷 Screenshot
+
+![App Screenshot](images/Screenshot%202025-10-03%20024531.png)
 
 
 ## 👨‍💻 Author
