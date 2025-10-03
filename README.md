@@ -47,7 +47,7 @@ Users can register and log in to manage their notes securely.
 ---
 ## 📷 Screenshot
 
-![App Screenshot](images/Screenshot%202025-10-03%20024531.png)
+![Homepage Screenshot](images/screenshot1.png)
 
 
 ## 👨‍💻 Author
